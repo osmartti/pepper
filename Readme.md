@@ -1,4 +1,4 @@
-#Ohjeet projektin saamiseen gitistä
+# Ohjeet projektin saamiseen gitistä
 
 luo kansio lokaalisti mihin haluat projektin kansiot
 git clone https://github.com/osmartti/pepper
