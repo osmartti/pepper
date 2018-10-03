@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.0" uuid="detect_wave-e98855">
+ <names>
+  <name lang="en_US">detect and wave</name>
+ </names>
+ <supportedLanguages>
+  <language>en_US</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>solitary</nature>
+   <names>
+    <name lang="en_US">killall</name>
+   </names>
+   <triggerSentences/>
+   <loadingResponses/>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[('Launchpad/FocusedActivity' != "behavior_1/.")~30 && ('Launchpad/NumPeopleZone2' > 0)
+]]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+</package>
