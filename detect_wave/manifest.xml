@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package version="0.0.0" uuid="detect_wave-e98855">
+<package uuid="detect_wave-e98855" version="0.0.0">
  <names>
   <name lang="en_US">detect and wave</name>
  </names>
@@ -14,15 +14,40 @@
    <userRequestable/>
    <nature>solitary</nature>
    <names>
-    <name lang="en_US">killall</name>
+    <name lang="en_US">detect-and-wave</name>
    </names>
    <triggerSentences/>
-   <loadingResponses/>
+   <loadingResponses>
+    <sentence lang="en_US">Loading kill all</sentence>
+   </loadingResponses>
    <autonomous>
-    <condition purpose="launchTrigger"><![CDATA[('Launchpad/FocusedActivity' != "behavior_1/.")~30 && ('Launchpad/NumPeopleZone2' > 0)
+    <condition purpose="launchTrigger"><![CDATA[('Launchpad/FocusedActivity' != "detect_wave/behavior_1") ~ 15 && ('Launchpad/NumPeopleZone2' > 0)
 ]]></condition>
    </autonomous>
-   <permissions/>
+   <permissions>
+    <canRunOnPod/>
+   </permissions>
+  </behaviorContent>
+  <behaviorContent path="behavior_2">
+   <userRequestable/>
+   <nature>solitary</nature>
+   <names>
+    <name lang="en_US">detect-and-wave</name>
+   </names>
+   <triggerSentences/>
+   <loadingResponses>
+    <sentence lang="en_US">Loading zone 1</sentence>
+   </loadingResponses>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[('Launchpad/FocusedActivity' != "detect_wave/behavior_2") ~ 10 &&('Launchpad/NumPeopleZone1' > 0)]]></condition>
+   </autonomous>
+   <permissions>
+    <canRunOnPod/>
+   </permissions>
   </behaviorContent>
  </contents>
+ <requirements>
+  <naoqiRequirement/>
+  <robotRequirement/>
+ </requirements>
 </package>
