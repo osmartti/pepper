@@ -1,0 +1,52 @@
+<html>
+<meta name="viewport" content="width=1280, user-scalable=no" />
+<meta charset="UTF-8">
+
+<head>
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="js/index.js"></script>
+</head>
+
+<body>
+        <div class="row">
+                <div class="column side">
+                        <img class="resize" src="Pictures/Yle_logo_HD_RGB.png">
+                        <ul id="MainMenu" >
+                                <li><a class="active" href="#home">Studio 10</a></li>
+                                <li><a href="index.html">Ruokalistat</a></li>
+                <li><a href="index2.html">Kotisivu</a></li>
+                              </ul>
+                </div>
+                <div class="column middle">
+                        <div id="RestaurantMenu">
+                                <h1><p id="day"></p></h1>
+                                <p id="menus"></p>
+                                
+                                <script>
+                              
+                                  var xmlhttp = new XMLHttpRequest();
+                                  var myArr, i, j, x = "";
+                              
+                                  xmlhttp.onreadystatechange = function() {
+                                      if (this.readyState == 4 && this.status == 200) {
+                                          var myArr = JSON.parse(this.responseText);
+                                  
+                                  x += "<h2>" + myArr[0].menus[1].restaurant + "</h2>";
+                                  for (j in myArr[0].menus[1].menu) {
+                                      x += myArr[0].menus[1].menu[j].food + "<br>";
+                                  }
+                                      
+                                      document.getElementById("day").innerHTML = myArr[0].humanDate;
+                                      document.getElementById("menus").innerHTML = x;
+                                  }
+                                  };
+                                  xmlhttp.open("GET", "https://svenska.yle.fi/dataviz/food/foodserver.php", true);
+                                  xmlhttp.send();
+                                  
+                                  </script>
+                            </div>
+                </div>
+                <div class="column side"></div>
+        </div>
+</body>
+</html>

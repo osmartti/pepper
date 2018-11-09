@@ -1,0 +1,66 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #f1f1f1;
+    
+}
+
+li {
+    border-style:solid;
+    border: #ffffff ;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px 10px 20px;
+    text-decoration: none;
+    
+}
+
+li a.active {
+    background-color: #00b4c8;
+    color: white;
+}
+
+
+#HomePageMenu{
+    font-size: 40px;
+}
+
+#RestaurantMenu{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    font-size: 23px;
+}
+
+.row:after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.column{
+    float: left;
+    padding: 10px;
+}
+
+.column.side{
+width: 25%;
+}
+
+.column.middle{
+width: 50%;
+}
+#MainMenu{
+ font-size: 40px;
+}
+
+img.resize {
+    width:150px; /* you can use % */
+    height: auto;
+}

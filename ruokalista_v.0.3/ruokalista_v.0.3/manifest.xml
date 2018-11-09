@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package uuid="mvp_demo-ed877d" version="0.0.0">
+ <names>
+  <name lang="en_US">Ruokalista &amp; Selfie</name>
+ </names>
+ <supportedLanguages>
+  <language>en_US</language>
+  <language>fi_FI</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+  <language>fi_FI</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[('Launchpad/NumPeopleZone1' > 0)]]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+</package>
